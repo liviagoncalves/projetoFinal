@@ -1,0 +1,283 @@
+<html><head>
+<title>Data dictionary: MbFashionFinal</title>
+<style>
+    td,th {
+      text-align:center; 
+      vertical-align:middle;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    caption, th, td {
+      padding: .2em .8em;
+      border: 1px solid #fff;
+    }
+    caption {
+      background: #dbb768;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    th {
+      font-weight: bold;
+      background: #f3ce7d;
+    }
+    td {
+      background: #ffea97;
+    }
+  </style>
+</head>
+<body>
+<table><caption>Table: menu - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>idmenu</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>nome</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>link</td><td>VARCHAR(100)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>icone</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>exibir</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table></br>
+<table><caption>Table: perfil - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>idperfil</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>nome</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table></br>
+<table><caption>Table: usuario - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>idusuario</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>nome</td><td>VARCHAR(100)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>login</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>senha</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>status</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>idperfil</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+</table></br>
+<table><caption>Table: menu_perfil - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>idmenu</td><td>INT</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>idperfil</td><td>INT</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+</table></br>
+<table><caption>Table: cliente - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>idcliente</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>nome</td><td>VARCHAR(100)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>email</td><td>VARCHAR(100)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>cpf</td><td>VARCHAR(14)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>rg</td><td>VARCHAR(20)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>data_nasc</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>sexo</td><td>CHAR</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>telefone</td><td>VARCHAR(14)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>cep</td><td>VARCHAR(9)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>endereco</td><td>VARCHAR(100)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>numero</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>complemento</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>bairro</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>cidade</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>uf</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>cliente_desde</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>fidelidade</td><td>CHAR</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>promocao</td><td>CHAR</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table></br>
+<table><caption>Table: fornecedor - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>idfornecedor</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>razao_social</td><td>VARCHAR(100)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>cnpj</td><td>VARCHAR(18)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>inscricao_estadual</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>telefone</td><td>VARCHAR(14)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>cep</td><td>VARCHAR(9)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>endereco</td><td>VARCHAR(100)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>numero</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>complemento</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>bairro</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>cidade</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>uf</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table></br>
+<table><caption>Table: cor - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>idcor</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>nome</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table></br>
+<table><caption>Table: categoria - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>idcategoria</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>nome</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table></br>
+<table><caption>Table: marca - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>idmarca</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>nome</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table></br>
+<table><caption>Table: tamanho - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>idtamanho</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>nome</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table></br>
+<table><caption>Table: produto - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>idproduto</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>codigo_barras</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>descricao</td><td>VARCHAR(45)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>vlr_compra</td><td>DOUBLE</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>vlr_venda</td><td>DOUBLE</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>estoque</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>estoque_minimo</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>idfornecedor</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>idcategoria</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>idcor</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>idtamanho</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>idmarca</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+</table></br>
+<table><caption>Table: vendas - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>idvendas</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>data_venda</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>vlr_total</td><td>DOUBLE</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>idusuario</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>idcliente</td><td>INT</td><td>Yes</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+</table></br>
+<table><caption>Table: lancamentos - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>idlancamentos</td><td>INT</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>descricao</td><td>VARCHAR(200)</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>valor</td><td>DOUBLE</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>vencimento</td><td>DATE</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>pagamento</td><td>DATE</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>baixado</td><td>INT</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>tipo_pagamento</td><td>VARCHAR(100)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>tipo</td><td>VARCHAR(50)</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>idvendas</td><td>INT</td><td>No</td><td>No</td><td>Yes</td><td></td><td></td></tr>
+</table></br>
+<table><caption>Table: Itens_de_venda - </caption>
+<tr><td colspan="7">Attributes</td></tr>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Not Null</th>
+<th>PK</th>
+<th>FK</th>
+<th>Default</th>
+<th>Comment</th>
+</tr>
+<tr><td>idvendas</td><td>INT</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>idproduto</td><td>INT</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>sub_total</td><td>DOUBLE</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>qtde</td><td>INT</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>desconto</td><td>DOUBLE</td><td>No</td><td>No</td><td>No</td><td></td><td></td></tr>
+<tr><td>valor</td><td>DOUBLE</td><td>Yes</td><td>No</td><td>No</td><td></td><td></td></tr>
+</table></br>
+</body></html>

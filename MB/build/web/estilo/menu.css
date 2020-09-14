@@ -1,0 +1,21 @@
+nav a{
+    color: rgb(10,186,181) !important;
+    text-transform: uppercase;
+    list-style: none;
+    font-weight: bold;
+}
+nav ul li a{
+    color: rgb(10,186,181) !important;
+    text-transform: uppercase;
+    list-style: none;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    color: #000 !important;
+}
+header{
+    margin-bottom: 56px !important;
+}
+.pull-right{
+    color: rgb(10,186,181) !important;
+}
